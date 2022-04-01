@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM64">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM64">
+      <Configuration>Release</Configuration>
+      <Platform>ARM64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FE1420FA-57E3-402D-ABA8-D99E1EBC2CE2}</ProjectGuid>
+    <TemplateGuid>{dd38f7fc-d7bd-488b-9242-7d8754cde80d}</TemplateGuid>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration>Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">Win32</Platform>
+    <RootNamespace>CheatVMM</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.18362.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <TargetVersion>Windows7</TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <TargetVersion>Windows7</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
+    <SpectreMitigation>false</SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'" Label="Configuration">
+    <TargetVersion>Windows10</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <IncludePath>$(VC_IncludePath);E:\CheatVMMX64dbg\CheatVMM\stl;E:\CheatVMMX64dbg\CheatVMM\include;$(IncludePath)</IncludePath>
+    <EnableInf2cat>false</EnableInf2cat>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <IncludePath>$(vc_includepath);E:\CheatVMMX64dbg\CheatVMM\include;E:\CheatVMMX64dbg\CheatVMM\stl;D:\VMProtect Ultimate\Include\C;$(IncludePath)</IncludePath>
+    <EnableInf2cat>false</EnableInf2cat>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <PreprocessorDefinitions>ZYDIS_STATIC_DEFINE;_NO_CRT_STDIO_INLINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>netio.lib;Zydis.lib;Ntstrsafe.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/VERBOSE:LIB %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalLibraryDirectories>E:\CheatVMMX64dbg\CheatVMM\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <PreprocessorDefinitions>ZYDIS_STATIC_DEFINE;_NO_CRT_STDIO_INLINE;_WIN64;_AMD64_;AMD64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+    </ClCompile>
+    <Link>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>netio.lib;Zydis.lib;Ntstrsafe.lib;VMProtectDDK64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>E:\CheatVMMX64dbg\CheatVMM\lib;D:\VMProtect Ultimate\Lib\Windows</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Inf Include="HyperPlatform\HyperPlatform.inf" />
+  </ItemGroup>
+  <ItemGroup>
+    <FilesToPackage Include="$(TargetPath)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AobScan.cpp" />
+    <ClCompile Include="hideoffset.cpp" />
+    <ClCompile Include="HyperPlatform\driver.cpp" />
+    <ClCompile Include="HyperPlatform\ept.cpp" />
+    <ClCompile Include="HyperPlatform\global_object.cpp" />
+    <ClCompile Include="HyperPlatform\hotplug_callback.cpp" />
+    <ClCompile Include="HyperPlatform\log.cpp" />
+    <ClCompile Include="HyperPlatform\performance.cpp" />
+    <ClCompile Include="HyperPlatform\power_callback.cpp" />
+    <ClCompile Include="HyperPlatform\util.cpp" />
+    <ClCompile Include="HyperPlatform\vm.cpp" />
+    <ClCompile Include="HyperPlatform\vmm.cpp" />
+    <ClCompile Include="include\callback.cpp" />
+    <ClCompile Include="include\cr3.cpp" />
+    <ClCompile Include="include\ddyutil.cpp" />
+    <ClCompile Include="include\instruction_check.cpp" />
+    <ClCompile Include="include\modify_instruction.cpp" />
+    <ClCompile Include="include\ntdll.cpp" />
+    <ClCompile Include="include\pe.cpp" />
+    <ClCompile Include="KernelSocked\berkeley.c" />
+    <ClCompile Include="KernelSocked\DDYSocket.cpp" />
+    <ClCompile Include="KernelSocked\ksocket.c" />
+    <ClCompile Include="MemoryHide.cpp" />
+    <ClCompile Include="minihook_kernel\minihook_include\minihook_cr3.cpp" />
+    <ClCompile Include="minihook_kernel\minihook_include\minihook_pe.cpp" />
+    <ClCompile Include="minihook_kernel\minihook_src\buffer.cpp" />
+    <ClCompile Include="minihook_kernel\minihook_src\hde\hde32.c" />
+    <ClCompile Include="minihook_kernel\minihook_src\hde\hde64.c" />
+    <ClCompile Include="minihook_kernel\minihook_src\hook.c" />
+    <ClCompile Include="minihook_kernel\minihook_src\trampoline.c" />
+    <ClCompile Include="ProcessUtil.cpp" />
+    <ClCompile Include="SsdtHook.cpp" />
+    <ClCompile Include="Stowaways.cpp" />
+    <ClCompile Include="Win10_15063.cpp" />
+    <ClCompile Include="Win10_16299.cpp" />
+    <ClCompile Include="Win10_17134.cpp" />
+    <ClCompile Include="Win10_17763.cpp" />
+    <ClCompile Include="Win7_7601.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AobScan.h" />
+    <ClInclude Include="debugoffset.h" />
+    <ClInclude Include="hideoffset.h" />
+    <ClInclude Include="HyperPlatform\asm.h" />
+    <ClInclude Include="HyperPlatform\common.h" />
+    <ClInclude Include="HyperPlatform\driver.h" />
+    <ClInclude Include="HyperPlatform\ept.h" />
+    <ClInclude Include="HyperPlatform\global_object.h" />
+    <ClInclude Include="HyperPlatform\hotplug_callback.h" />
+    <ClInclude Include="HyperPlatform\ia32_type.h" />
+    <ClInclude Include="HyperPlatform\log.h" />
+    <ClInclude Include="HyperPlatform\performance.h" />
+    <ClInclude Include="HyperPlatform\perf_counter.h" />
+    <ClInclude Include="HyperPlatform\power_callback.h" />
+    <ClInclude Include="HyperPlatform\util.h" />
+    <ClInclude Include="HyperPlatform\util_page_constants.h" />
+    <ClInclude Include="HyperPlatform\vm.h" />
+    <ClInclude Include="HyperPlatform\vmm.h" />
+    <ClInclude Include="include\callback.h" />
+    <ClInclude Include="include\cr3.h" />
+    <ClInclude Include="include\ddyutil.h" />
+    <ClInclude Include="include\instruction_check.h" />
+    <ClInclude Include="include\intel_code.h" />
+    <ClInclude Include="include\log.h" />
+    <ClInclude Include="include\modify_instruction.h" />
+    <ClInclude Include="include\ntdll.h" />
+    <ClInclude Include="include\pe.h" />
+    <ClInclude Include="include\ssdt.h" />
+    <ClInclude Include="include\undocenum.h" />
+    <ClInclude Include="include\undocfun.h" />
+    <ClInclude Include="include\undocstruct.h" />
+    <ClInclude Include="include\utilenum.h" />
+    <ClInclude Include="include\vt.h" />
+    <ClInclude Include="KernelSocked\berkeley.h" />
+    <ClInclude Include="KernelSocked\DDYSocket.h" />
+    <ClInclude Include="KernelSocked\ksocket.h" />
+    <ClInclude Include="MemoryHide.h" />
+    <ClInclude Include="minihook_kernel\minihook_include\MinHook.h" />
+    <ClInclude Include="minihook_kernel\minihook_include\minihook_cr3.h" />
+    <ClInclude Include="minihook_kernel\minihook_include\minihook_pe.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\buffer.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\hde\hde32.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\hde\hde64.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\hde\pstdint.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\hde\table32.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\hde\table64.h" />
+    <ClInclude Include="minihook_kernel\minihook_src\trampoline.h" />
+    <ClInclude Include="OffsetHandler.h" />
+    <ClInclude Include="ProcessUtil.h" />
+    <ClInclude Include="SsdtHook.h" />
+    <ClInclude Include="Stowaways.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="callback.asm">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </MASM>
+    <MASM Include="HyperPlatform\Arch\x64\x64.asm" />
+    <MASM Include="OffsetHandler.asm" />
+    <MASM Include="PauseProcess.asm" />
+    <MASM Include="PreSsdtApi.asm" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="HyperPlatform\Directory.build.props" />
+    <None Include="HyperPlatform\HyperPlatform.ruleset" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="lib\Zydis.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

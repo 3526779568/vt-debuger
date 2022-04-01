@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/XinyiVmm">
+    <file>bk.jpeg</file>
+  </qresource>
+  <qresource prefix="icon">
+    <file>20201125095101605_easyicon_net_32.ico</file>
+  </qresource>
+</RCC>

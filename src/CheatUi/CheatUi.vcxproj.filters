@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="源文件">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="头文件">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CheatUi.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="framework.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="AsmCompile.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Stowaways.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="injection.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Login.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="CBigInt.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="MemoryModule.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libpe\htable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libpe\libpe.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="libpe\llist.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="IsBeingDebuged.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\NtApiShim.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\Peb.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\PebHider.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\Resource.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\Settings.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\Util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\Win32kSyscalls.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Scylla\OsInfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="basicinfo.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="regedit\regedit.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CheatUi.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="injection.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Login.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="CBigInt.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="MemoryModule.c">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libpe\htable.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libpe\libpe.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="libpe\llist.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="IsBeingDebuged.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scylla\Peb.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scylla\PebHider.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scylla\Settings.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scylla\Util.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Scylla\OsInfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="basicinfo.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="regedit\regedit.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\CheatUi.rc2">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\sysfile1.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\sysfile2.bin">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\systemfi.bin">
+      <Filter>资源文件</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\CheatUi.ico">
+      <Filter>资源文件</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="CheatUi.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

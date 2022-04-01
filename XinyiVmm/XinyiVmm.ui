@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>XinyiVmmClass</class>
+ <widget class="QMainWindow" name="XinyiVmmClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>315</width>
+    <height>515</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>XinyiVmm</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="XinyiVmm.qrc">
+    <normaloff>:/icon/20201125095101605_easyicon_net_32.ico</normaloff>:/icon/20201125095101605_easyicon_net_32.ico</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>10</y>
+      <width>311</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>系统信息</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>21</y>
+       <width>48</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>系统版本</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>11</x>
+       <y>41</y>
+       <width>42</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>CPU型号</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sysinfo">
+     <property name="geometry">
+      <rect>
+       <x>68</x>
+       <y>21</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>登录卡死联系作者</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="cpuinfo">
+     <property name="geometry">
+      <rect>
+       <x>68</x>
+       <y>41</y>
+       <width>231</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>必须是Intel CPU</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_2">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>80</y>
+      <width>311</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>登录模块</string>
+    </property>
+    <widget class="QLineEdit" name="username">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>用户名</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>171</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>密码</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Login">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>登录</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_3">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>170</y>
+      <width>171</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>运行模式</string>
+    </property>
+    <widget class="QRadioButton" name="unuse_ept">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>推荐首选</string>
+     </property>
+     <property name="text">
+      <string>精简模式</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="use_ept">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>161</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>可尝试方案</string>
+     </property>
+     <property name="text">
+      <string>加强模式（部分机器卡顿）</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_4">
+    <property name="geometry">
+     <rect>
+      <x>180</x>
+      <y>170</y>
+      <width>132</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>优化选项</string>
+    </property>
+    <widget class="QRadioButton" name="unuse_mode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>优化一</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="use_mode">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>89</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>优化二</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_5">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>350</y>
+      <width>311</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>调试器</string>
+    </property>
+    <widget class="QLineEdit" name="DebugPath1">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>211</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Open1">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>20</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>打开</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DebugPath2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>211</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Open2">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>50</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>打开</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DebugPath3">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>80</y>
+       <width>211</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Open3">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>80</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>打开</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="DebugPath4">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>211</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="Open4">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>230</x>
+       <y>110</y>
+       <width>75</width>
+       <height>23</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>打开</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="groupBox_6">
+    <property name="geometry">
+     <rect>
+      <x>1</x>
+      <y>260</y>
+      <width>311</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>润滑剂</string>
+    </property>
+    <widget class="QCheckBox" name="AntiInterference">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>建议勾选</string>
+     </property>
+     <property name="text">
+      <string>抗干扰</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="ProtectDebuger">
+     <property name="geometry">
+      <rect>
+       <x>90</x>
+       <y>20</y>
+       <width>101</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>建议勾选</string>
+     </property>
+     <property name="text">
+      <string>保护调试器</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="Performance">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>20</y>
+       <width>71</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>建议勾选</string>
+     </property>
+     <property name="text">
+      <string>性能锯齿</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="antihardware">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>91</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>一点小东西</string>
+     </property>
+     <property name="whatsThis">
+      <string/>
+     </property>
+     <property name="text">
+      <string>反硬件断点</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="infbreakpoint">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>40</y>
+       <width>111</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>强制开启</string>
+     </property>
+     <property name="text">
+      <string>无痕硬断(强制)</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="disablethread">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>40</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>看情况勾选</string>
+     </property>
+     <property name="text">
+      <string>禁线程消息</string>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="supercontext">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>60</y>
+       <width>81</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="statusTip">
+      <string>只适用于ce和x64进程</string>
+     </property>
+     <property name="text">
+      <string>上下文模式</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="XinyiVmm.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>Login</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>LoginClicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>218</x>
+     <y>122</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>104</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Open1</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>Open1Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>267</x>
+     <y>291</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>305</x>
+     <y>255</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Open2</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>Open2Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>286</x>
+     <y>315</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>323</x>
+     <y>309</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Open3</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>Open3Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>298</x>
+     <y>348</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>314</x>
+     <y>336</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Open4</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>Open4Clicked()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>271</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>317</x>
+     <y>374</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>AntiInterference</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>19</x>
+     <y>284</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-8</x>
+     <y>260</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ProtectDebuger</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>100</x>
+     <y>285</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>322</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Performance</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>203</x>
+     <y>283</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>1</x>
+     <y>253</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>antihardware</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>20</x>
+     <y>306</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>0</x>
+     <y>298</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>disablethread</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>107</x>
+     <y>307</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-4</x>
+     <y>341</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>supercontext</sender>
+   <signal>clicked()</signal>
+   <receiver>XinyiVmmClass</receiver>
+   <slot>ClickConf()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>329</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>-7</x>
+     <y>332</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>LoginClicked()</slot>
+  <slot>Open1Clicked()</slot>
+  <slot>Open2Clicked()</slot>
+  <slot>Open3Clicked()</slot>
+  <slot>Open4Clicked()</slot>
+  <slot>ClickConf()</slot>
+ </slots>
+</ui>

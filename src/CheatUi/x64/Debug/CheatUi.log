@@ -1,0 +1,136 @@
+﻿  Login.cpp
+E:\hvpp\src\CheatUi\Login.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\hvpp\src\CheatUi\Stowaways.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(66,1): warning C4005: “STATUS_WAIT_0”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2496): message : 参见“STATUS_WAIT_0”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(221,1): warning C4005: “STATUS_ABANDONED_WAIT_0”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2497): message : 参见“STATUS_ABANDONED_WAIT_0”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(244,1): warning C4005: “STATUS_USER_APC”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2498): message : 参见“STATUS_USER_APC”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(280,1): warning C4005: “STATUS_TIMEOUT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2499): message : 参见“STATUS_TIMEOUT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(289,1): warning C4005: “STATUS_PENDING”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2500): message : 参见“STATUS_PENDING”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(736,1): warning C4005: “DBG_EXCEPTION_HANDLED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2501): message : 参见“DBG_EXCEPTION_HANDLED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(745,1): warning C4005: “DBG_CONTINUE”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2502): message : 参见“DBG_CONTINUE”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(820,1): warning C4005: “STATUS_SEGMENT_NOTIFICATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2503): message : 参见“STATUS_SEGMENT_NOTIFICATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(983,1): warning C4005: “STATUS_FATAL_APP_EXIT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2504): message : 参见“STATUS_FATAL_APP_EXIT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1303,1): warning C4005: “DBG_REPLY_LATER”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2505): message : 参见“DBG_REPLY_LATER”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1321,1): warning C4005: “DBG_TERMINATE_THREAD”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2506): message : 参见“DBG_TERMINATE_THREAD”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1330,1): warning C4005: “DBG_TERMINATE_PROCESS”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2507): message : 参见“DBG_TERMINATE_PROCESS”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1339,1): warning C4005: “DBG_CONTROL_C”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2508): message : 参见“DBG_CONTROL_C”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1348,1): warning C4005: “DBG_PRINTEXCEPTION_C”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2509): message : 参见“DBG_PRINTEXCEPTION_C”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1357,1): warning C4005: “DBG_RIPEXCEPTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2510): message : 参见“DBG_RIPEXCEPTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1366,1): warning C4005: “DBG_CONTROL_BREAK”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2511): message : 参见“DBG_CONTROL_BREAK”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1375,1): warning C4005: “DBG_COMMAND_EXCEPTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2512): message : 参见“DBG_COMMAND_EXCEPTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1384,1): warning C4005: “DBG_PRINTEXCEPTION_WIDE_C”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2513): message : 参见“DBG_PRINTEXCEPTION_WIDE_C”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1416,1): warning C4005: “STATUS_GUARD_PAGE_VIOLATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2514): message : 参见“STATUS_GUARD_PAGE_VIOLATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1427,1): warning C4005: “STATUS_DATATYPE_MISALIGNMENT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2515): message : 参见“STATUS_DATATYPE_MISALIGNMENT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1438,1): warning C4005: “STATUS_BREAKPOINT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2516): message : 参见“STATUS_BREAKPOINT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1449,1): warning C4005: “STATUS_SINGLE_STEP”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2517): message : 参见“STATUS_SINGLE_STEP”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1752,1): warning C4005: “STATUS_LONGJUMP”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2518): message : 参见“STATUS_LONGJUMP”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1779,1): warning C4005: “STATUS_UNWIND_CONSOLIDATE”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2519): message : 参见“STATUS_UNWIND_CONSOLIDATE”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(1874,1): warning C4005: “DBG_EXCEPTION_NOT_HANDLED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2520): message : 参见“DBG_EXCEPTION_NOT_HANDLED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2020,1): warning C4005: “STATUS_ACCESS_VIOLATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2521): message : 参见“STATUS_ACCESS_VIOLATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2029,1): warning C4005: “STATUS_IN_PAGE_ERROR”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2522): message : 参见“STATUS_IN_PAGE_ERROR”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2047,1): warning C4005: “STATUS_INVALID_HANDLE”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2523): message : 参见“STATUS_INVALID_HANDLE”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2092,1): warning C4005: “STATUS_INVALID_PARAMETER”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2524): message : 参见“STATUS_INVALID_PARAMETER”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2192,1): warning C4005: “STATUS_NO_MEMORY”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2525): message : 参见“STATUS_NO_MEMORY”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2249,1): warning C4005: “STATUS_ILLEGAL_INSTRUCTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2526): message : 参见“STATUS_ILLEGAL_INSTRUCTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2330,1): warning C4005: “STATUS_NONCONTINUABLE_EXCEPTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2527): message : 参见“STATUS_NONCONTINUABLE_EXCEPTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(2339,1): warning C4005: “STATUS_INVALID_DISPOSITION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2528): message : 参见“STATUS_INVALID_DISPOSITION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3272,1): warning C4005: “STATUS_ARRAY_BOUNDS_EXCEEDED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2529): message : 参见“STATUS_ARRAY_BOUNDS_EXCEEDED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3282,1): warning C4005: “STATUS_FLOAT_DENORMAL_OPERAND”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2530): message : 参见“STATUS_FLOAT_DENORMAL_OPERAND”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3292,1): warning C4005: “STATUS_FLOAT_DIVIDE_BY_ZERO”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2531): message : 参见“STATUS_FLOAT_DIVIDE_BY_ZERO”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3302,1): warning C4005: “STATUS_FLOAT_INEXACT_RESULT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2532): message : 参见“STATUS_FLOAT_INEXACT_RESULT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3312,1): warning C4005: “STATUS_FLOAT_INVALID_OPERATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2533): message : 参见“STATUS_FLOAT_INVALID_OPERATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3322,1): warning C4005: “STATUS_FLOAT_OVERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2534): message : 参见“STATUS_FLOAT_OVERFLOW”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3332,1): warning C4005: “STATUS_FLOAT_STACK_CHECK”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2535): message : 参见“STATUS_FLOAT_STACK_CHECK”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3342,1): warning C4005: “STATUS_FLOAT_UNDERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2536): message : 参见“STATUS_FLOAT_UNDERFLOW”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3352,1): warning C4005: “STATUS_INTEGER_DIVIDE_BY_ZERO”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2537): message : 参见“STATUS_INTEGER_DIVIDE_BY_ZERO”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3362,1): warning C4005: “STATUS_INTEGER_OVERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2538): message : 参见“STATUS_INTEGER_OVERFLOW”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(3372,1): warning C4005: “STATUS_PRIVILEGED_INSTRUCTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2539): message : 参见“STATUS_PRIVILEGED_INSTRUCTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4318,1): warning C4005: “STATUS_STACK_OVERFLOW”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2540): message : 参见“STATUS_STACK_OVERFLOW”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4835,1): warning C4005: “STATUS_DLL_NOT_FOUND”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2541): message : 参见“STATUS_DLL_NOT_FOUND”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4864,1): warning C4005: “STATUS_ORDINAL_NOT_FOUND”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2542): message : 参见“STATUS_ORDINAL_NOT_FOUND”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4874,1): warning C4005: “STATUS_ENTRYPOINT_NOT_FOUND”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2543): message : 参见“STATUS_ENTRYPOINT_NOT_FOUND”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4884,1): warning C4005: “STATUS_CONTROL_C_EXIT”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2544): message : 参见“STATUS_CONTROL_C_EXIT”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(4962,1): warning C4005: “STATUS_DLL_INIT_FAILED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2545): message : 参见“STATUS_DLL_INIT_FAILED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(7508,1): warning C4005: “STATUS_FLOAT_MULTIPLE_FAULTS”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2546): message : 参见“STATUS_FLOAT_MULTIPLE_FAULTS”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(7518,1): warning C4005: “STATUS_FLOAT_MULTIPLE_TRAPS”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2547): message : 参见“STATUS_FLOAT_MULTIPLE_TRAPS”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(7650,1): warning C4005: “STATUS_REG_NAT_CONSUMPTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2548): message : 参见“STATUS_REG_NAT_CONSUMPTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(8633,1): warning C4005: “STATUS_HEAP_CORRUPTION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2549): message : 参见“STATUS_HEAP_CORRUPTION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(8861,1): warning C4005: “STATUS_STACK_BUFFER_OVERRUN”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2550): message : 参见“STATUS_STACK_BUFFER_OVERRUN”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(8988,1): warning C4005: “STATUS_INVALID_CRUNTIME_PARAMETER”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2551): message : 参见“STATUS_INVALID_CRUNTIME_PARAMETER”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(9051,1): warning C4005: “STATUS_ASSERTION_FAILURE”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2552): message : 参见“STATUS_ASSERTION_FAILURE”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(9969,1): warning C4005: “STATUS_ENCLAVE_VIOLATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2553): message : 参见“STATUS_ENCLAVE_VIOLATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(10369,1): warning C4005: “STATUS_INTERRUPTED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2554): message : 参见“STATUS_INTERRUPTED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(10378,1): warning C4005: “STATUS_THREAD_NOT_RUNNING”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2555): message : 参见“STATUS_THREAD_NOT_RUNNING”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(10672,1): warning C4005: “STATUS_ALREADY_REGISTERED”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2556): message : 参见“STATUS_ALREADY_REGISTERED”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(14205,1): warning C4005: “STATUS_SXS_EARLY_DEACTIVATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2558): message : 参见“STATUS_SXS_EARLY_DEACTIVATION”的前一个定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\shared\ntstatus.h(14214,1): warning C4005: “STATUS_SXS_INVALID_DEACTIVATION”: 宏重定义
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\um\winnt.h(2559): message : 参见“STATUS_SXS_INVALID_DEACTIVATION”的前一个定义
+E:\hvpp\src\CheatUi\Stowaways.h(272,9): warning C4101: “ret_size”: 未引用的局部变量
+E:\hvpp\src\CheatUi\basicinfo.h(1,1): warning C4819: 该文件包含不能在当前代码页(936)中表示的字符。请将该文件保存为 Unicode 格式以防止数据丢失
+E:\hvpp\src\CheatUi\Login.cpp(148,43): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\hvpp\src\CheatUi\Login.cpp(243,47): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+E:\hvpp\src\CheatUi\Login.cpp(263,10): warning C4101: “hf”: 未引用的局部变量
+E:\hvpp\src\CheatUi\Login.cpp(262,8): warning C4101: “hwnd”: 未引用的局部变量
+  CheatUi.vcxproj -> E:\hvpp\bin\x64\Debug\CheatUi.exe

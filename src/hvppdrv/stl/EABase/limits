@@ -1,0 +1,1189 @@
+// limits standard header
+#pragma once
+#ifndef _LIMITS_
+#define _LIMITS_
+#ifndef RC_INVOKED
+//#include <ymath.h>
+#include "float.h"
+#include "limits.h"
+//#include <cmath>
+//#include <cwchar>
+#include <xstddef>
+
+#ifdef __cplusplus
+#define _CSTD	::
+
+#define _EXTERN_C			extern "C" {
+#define _END_EXTERN_C		}
+#else /* ^^^ __cplusplus ^^^ // vvv !__cplusplus vvv */
+#define _CSTD
+
+#define _EXTERN_C
+#define _END_EXTERN_C
+#endif /* __cplusplus */
+
+ #pragma pack(push,_CRT_PACKING)
+ //_STL_DISABLE_CLANG_WARNINGS
+ #pragma push_macro("new")
+ #undef new
+
+_STD_BEGIN
+		// ENUM float_denorm_style
+enum float_denorm_style
+	{	// constants for different IEEE float denormalization styles
+	denorm_indeterminate = -1,
+	denorm_absent = 0,
+	denorm_present = 1
+	};
+
+		// ENUM float_round_style
+enum float_round_style
+	{	// constants for different IEEE rounding styles
+	round_indeterminate = -1,
+	round_toward_zero = 0,
+	round_to_nearest = 1,
+	round_toward_infinity = 2,
+	round_toward_neg_infinity = 3
+	};
+
+		// STRUCT _Num_base
+struct _Num_base
+	{	// base for all types, with common defaults
+	static constexpr float_denorm_style has_denorm = denorm_absent;
+	static constexpr bool has_denorm_loss = false;
+	static constexpr bool has_infinity = false;
+	static constexpr bool has_quiet_NaN = false;
+	static constexpr bool has_signaling_NaN = false;
+	static constexpr bool is_bounded = false;
+	static constexpr bool is_exact = false;
+	static constexpr bool is_iec559 = false;
+	static constexpr bool is_integer = false;
+	static constexpr bool is_modulo = false;
+	static constexpr bool is_signed = false;
+	static constexpr bool is_specialized = false;
+	static constexpr bool tinyness_before = false;
+	static constexpr bool traps = false;
+	static constexpr float_round_style round_style = round_toward_zero;
+	static constexpr int digits = 0;
+	static constexpr int digits10 = 0;
+	static constexpr int max_digits10 = 0;
+	static constexpr int max_exponent = 0;
+	static constexpr int max_exponent10 = 0;
+	static constexpr int min_exponent = 0;
+	static constexpr int min_exponent10 = 0;
+	static constexpr int radix = 0;
+	};
+
+		// CLASS TEMPLATE numeric_limits
+template<class _Ty>
+	class numeric_limits
+		: public _Num_base
+	{	// numeric limits for arbitrary type _Ty (say little or nothing)
+public:
+	 static constexpr _Ty (min)() 
+		{	// return minimum value
+		return (_Ty());
+		}
+
+	 static constexpr _Ty (max)() 
+		{	// return maximum value
+		return (_Ty());
+		}
+
+	 static constexpr _Ty lowest() 
+		{	// return most negative value
+		return (_Ty());
+		}
+
+	 static constexpr _Ty epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (_Ty());
+		}
+
+	 static constexpr _Ty round_error() 
+		{	// return largest rounding error
+		return (_Ty());
+		}
+
+	 static constexpr _Ty denorm_min() 
+		{	// return minimum denormalized value
+		return (_Ty());
+		}
+
+	 static constexpr _Ty infinity() 
+		{	// return positive infinity
+		return (_Ty());
+		}
+
+	 static constexpr _Ty quiet_NaN() 
+		{	// return non-signaling NaN
+		return (_Ty());
+		}
+
+	 static constexpr _Ty signaling_NaN() 
+		{	// return signaling NaN
+		return (_Ty());
+		}
+	};
+
+template<class _Ty>
+	class numeric_limits<const _Ty>
+		: public numeric_limits<_Ty>
+	{	// numeric limits for const types
+	};
+
+template<class _Ty>
+	class numeric_limits<volatile _Ty>
+		: public numeric_limits<_Ty>
+	{	// numeric limits for volatile types
+	};
+
+template<class _Ty>
+	class numeric_limits<const volatile _Ty>
+		: public numeric_limits<_Ty>
+	{	// numeric limits for const volatile types
+	};
+
+		// STRUCT _Num_int_base
+struct _Num_int_base
+	: _Num_base
+	{	// base for integer types
+	static constexpr bool is_bounded = true;
+	static constexpr bool is_exact = true;
+	static constexpr bool is_integer = true;
+	static constexpr bool is_specialized = true;
+	static constexpr int radix = 2;
+	};
+
+		// STRUCT _Num_float_base
+struct _Num_float_base
+	: _Num_base
+	{	// base for floating-point types
+	static constexpr float_denorm_style has_denorm = denorm_present;
+	static constexpr bool has_infinity = true;
+	static constexpr bool has_quiet_NaN = true;
+	static constexpr bool has_signaling_NaN = true;
+	static constexpr bool is_bounded = true;
+	static constexpr bool is_iec559 = true;
+	static constexpr bool is_signed = true;
+	static constexpr bool is_specialized = true;
+	static constexpr float_round_style round_style = round_to_nearest;
+	static constexpr int radix = FLT_RADIX;
+	};
+
+		// CLASS numeric_limits<char>
+template<> class numeric_limits<char>
+	: public _Num_int_base
+	{	// limits for type char
+public:
+	 static constexpr char (min)() 
+		{	// return minimum value
+		return (CHAR_MIN);
+		}
+
+	 static constexpr char (max)() 
+		{	// return maximum value
+		return (CHAR_MAX);
+		}
+
+	 static constexpr char lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr char epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr char round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr char denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr char infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr char quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr char signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_signed = CHAR_MIN != 0;
+	static constexpr bool is_modulo = CHAR_MIN == 0;
+	static constexpr int digits = 8 - (CHAR_MIN != 0);
+	static constexpr int digits10 = 2;
+	};
+
+		// CLASS numeric_limits<wchar_t>
+template<> class numeric_limits<wchar_t>
+	: public _Num_int_base
+	{	// limits for type wchar_t
+public:
+	 static constexpr wchar_t (min)() 
+		{	// return minimum value
+		return (WCHAR_MIN);
+		}
+
+	 static constexpr wchar_t (max)() 
+		{	// return maximum value
+		return (WCHAR_MAX);
+		}
+
+	 static constexpr wchar_t lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr wchar_t epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr wchar_t round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr wchar_t denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr wchar_t infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr wchar_t quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr wchar_t signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 16;
+	static constexpr int digits10 = 4;
+	};
+
+		// CLASS numeric_limits<bool>
+template<> class numeric_limits<bool>
+	: public _Num_int_base
+	{	// limits for type bool
+public:
+	 static constexpr bool (min)() 
+		{	// return minimum value
+		return (false);
+		}
+
+	 static constexpr bool (max)() 
+		{	// return maximum value
+		return (true);
+		}
+
+	 static constexpr bool lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr bool epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr bool round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr bool denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr bool infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr bool quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr bool signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr int digits = 1;
+	};
+
+		// CLASS numeric_limits<signed char>
+template<> class numeric_limits<signed char>
+	: public _Num_int_base
+	{	// limits for type signed char
+public:
+	 static constexpr signed char (min)() 
+		{	// return minimum value
+		return (SCHAR_MIN);
+		}
+
+	 static constexpr signed char (max)() 
+		{	// return maximum value
+		return (SCHAR_MAX);
+		}
+
+	 static constexpr signed char lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr signed char epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr signed char round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr signed char denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr signed char infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr signed char quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr signed char signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_signed = true;
+	static constexpr int digits = 7;
+	static constexpr int digits10 = 2;
+	};
+
+		// CLASS numeric_limits<unsigned char>
+template<> class numeric_limits<unsigned char>
+	: public _Num_int_base
+	{	// limits for type unsigned char
+public:
+	 static constexpr unsigned char (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr unsigned char (max)() 
+		{	// return maximum value
+		return (UCHAR_MAX);
+		}
+
+	 static constexpr unsigned char lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr unsigned char epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr unsigned char round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr unsigned char denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr unsigned char infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr unsigned char quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr unsigned char signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 8;
+	static constexpr int digits10 = 2;
+	};
+
+		// CLASS numeric_limits<short>
+template<> class numeric_limits<short>
+	: public _Num_int_base
+	{	// limits for type short
+public:
+	 static constexpr short (min)() 
+		{	// return minimum value
+		return (SHRT_MIN);
+		}
+
+	 static constexpr short (max)() 
+		{	// return maximum value
+		return (SHRT_MAX);
+		}
+
+	 static constexpr short lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr short epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr short round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr short denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr short infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr short quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr short signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_signed = true;
+	static constexpr int digits = 15;
+	static constexpr int digits10 = 4;
+	};
+
+ #ifdef _NATIVE_WCHAR_T_DEFINED
+		// CLASS numeric_limits<unsigned short>
+template<> class numeric_limits<unsigned short>
+	: public _Num_int_base
+	{	// limits for type unsigned short
+public:
+	 static constexpr unsigned short (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr unsigned short (max)() 
+		{	// return maximum value
+		return (USHRT_MAX);
+		}
+
+	 static constexpr unsigned short lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr unsigned short epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr unsigned short round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr unsigned short denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr unsigned short infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr unsigned short quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr unsigned short signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 16;
+	static constexpr int digits10 = 4;
+	};
+ #endif /* _NATIVE_WCHAR_T_DEFINED */
+
+		// CLASS numeric_limits<char16_t>
+template<> class numeric_limits<char16_t>
+	: public _Num_int_base
+	{	// limits for type char16_t
+public:
+	 static constexpr char16_t (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr char16_t (max)() 
+		{	// return maximum value
+		return (USHRT_MAX);
+		}
+
+	 static constexpr char16_t lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr char16_t epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr char16_t round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr char16_t denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr char16_t infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr char16_t quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr char16_t signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 16;
+	static constexpr int digits10 = 4;
+	};
+
+		// CLASS numeric_limits<int>
+template<> class numeric_limits<int>
+	: public _Num_int_base
+	{	// limits for type int
+public:
+	 static constexpr int (min)() 
+		{	// return minimum value
+		return (INT_MIN);
+		}
+
+	 static constexpr int (max)() 
+		{	// return maximum value
+		return (INT_MAX);
+		}
+
+	 static constexpr int lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr int epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr int round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr int denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr int infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr int quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr int signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_signed = true;
+	static constexpr int digits = 31;
+	static constexpr int digits10 = 9;
+	};
+
+		// CLASS numeric_limits<unsigned int>
+template<> class numeric_limits<unsigned int>
+	: public _Num_int_base
+	{	// limits for type unsigned int
+public:
+	 static constexpr unsigned int (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr unsigned int (max)() 
+		{	// return maximum value
+		return (UINT_MAX);
+		}
+
+	 static constexpr unsigned int lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr unsigned int epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr unsigned int round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr unsigned int denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr unsigned int infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr unsigned int quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr unsigned int signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 32;
+	static constexpr int digits10 = 9;
+	};
+
+		// CLASS numeric_limits<long>
+template<> class numeric_limits<long>
+	: public _Num_int_base
+	{	// limits for type long
+public:
+	 static constexpr long (min)() 
+		{	// return minimum value
+		return (LONG_MIN);
+		}
+
+	 static constexpr long (max)() 
+		{	// return maximum value
+		return (LONG_MAX);
+		}
+
+	 static constexpr long lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr long epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr long round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr long denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr long infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr long quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr long signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static_assert(sizeof(int) == sizeof(long), "LLP64 assumption");
+	static constexpr bool is_signed = true;
+	static constexpr int digits = 31;
+	static constexpr int digits10 = 9;
+	};
+
+		// CLASS numeric_limits<unsigned long>
+template<> class numeric_limits<unsigned long>
+	: public _Num_int_base
+	{	// limits for type unsigned long
+public:
+	 static constexpr unsigned long (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr unsigned long (max)() 
+		{	// return maximum value
+		return (ULONG_MAX);
+		}
+
+	 static constexpr unsigned long lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr unsigned long epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr unsigned long round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr unsigned long denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr unsigned long infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr unsigned long quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr unsigned long signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static_assert(sizeof(unsigned int) == sizeof(unsigned long), "LLP64 assumption");
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 32;
+	static constexpr int digits10 = 9;
+	};
+
+		// CLASS numeric_limits<char32_t>
+template<> class numeric_limits<char32_t>
+	: public _Num_int_base
+	{	// limits for type char32_t
+public:
+	 static constexpr char32_t (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr char32_t (max)() 
+		{	// return maximum value
+		return (UINT_MAX);
+		}
+
+	 static constexpr char32_t lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr char32_t epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr char32_t round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr char32_t denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr char32_t infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr char32_t quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr char32_t signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 32;
+	static constexpr int digits10 = 9;
+	};
+
+		// CLASS numeric_limits<long long>
+template<> class numeric_limits<long long>
+	: public _Num_int_base
+	{	// limits for type long long
+public:
+	 static constexpr long long (min)() 
+		{	// return minimum value
+		return (LLONG_MIN);
+		}
+
+	 static constexpr long long (max)() 
+		{	// return maximum value
+		return (LLONG_MAX);
+		}
+
+	 static constexpr long long lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr long long epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr long long round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr long long denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr long long infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr long long quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr long long signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_signed = true;
+	static constexpr int digits = 63;
+	static constexpr int digits10 = 18;
+	};
+
+		// CLASS numeric_limits<unsigned long long>
+template<> class numeric_limits<unsigned long long>
+	: public _Num_int_base
+	{	// limits for type unsigned long long
+public:
+	 static constexpr unsigned long long (min)() 
+		{	// return minimum value
+		return (0);
+		}
+
+	 static constexpr unsigned long long (max)() 
+		{	// return maximum value
+		return (ULLONG_MAX);
+		}
+
+	 static constexpr unsigned long long lowest() 
+		{	// return most negative value
+		return ((min)());
+		}
+
+	 static constexpr unsigned long long epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (0);
+		}
+
+	 static constexpr unsigned long long round_error() 
+		{	// return largest rounding error
+		return (0);
+		}
+
+	 static constexpr unsigned long long denorm_min() 
+		{	// return minimum denormalized value
+		return (0);
+		}
+
+	 static constexpr unsigned long long infinity() 
+		{	// return positive infinity
+		return (0);
+		}
+
+	 static constexpr unsigned long long quiet_NaN() 
+		{	// return non-signaling NaN
+		return (0);
+		}
+
+	 static constexpr unsigned long long signaling_NaN() 
+		{	// return signaling NaN
+		return (0);
+		}
+
+	static constexpr bool is_modulo = true;
+	static constexpr int digits = 64;
+	static constexpr int digits10 = 19;
+	};
+
+		// CLASS numeric_limits<float>
+template<> class numeric_limits<float>
+	: public _Num_float_base
+	{	// limits for type float
+public:
+	 static constexpr float (min)() 
+		{	// return minimum value
+		return (FLT_MIN);
+		}
+
+	 static constexpr float (max)() 
+		{	// return maximum value
+		return (FLT_MAX);
+		}
+
+	 static constexpr float lowest() 
+		{	// return most negative value
+		return (-(max)());
+		}
+
+	 static constexpr float epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (FLT_EPSILON);
+		}
+
+	 static constexpr float round_error() 
+		{	// return largest rounding error
+		return (0.5F);
+		}
+#define FLT_TRUE_MIN     1.401298464e-45F        // min positive value
+	 static constexpr float denorm_min() 
+		{	// return minimum denormalized value
+		return (FLT_TRUE_MIN);
+		}
+
+	 static constexpr float infinity() 
+		{	// return positive infinity
+		return (__builtin_huge_valf());
+		}
+
+	 static constexpr float quiet_NaN() 
+		{	// return non-signaling NaN
+		return (__builtin_nanf("0"));
+		}
+
+	 static constexpr float signaling_NaN() 
+		{	// return signaling NaN
+		return (__builtin_nansf("1"));
+		}
+
+	static constexpr int digits = FLT_MANT_DIG;
+	static constexpr int digits10 = FLT_DIG;
+	static constexpr int max_digits10 = 9;
+	static constexpr int max_exponent = FLT_MAX_EXP;
+	static constexpr int max_exponent10 = FLT_MAX_10_EXP;
+	static constexpr int min_exponent = FLT_MIN_EXP;
+	static constexpr int min_exponent10 = FLT_MIN_10_EXP;
+	};
+
+		// CLASS numeric_limits<double>
+template<> class numeric_limits<double>
+	: public _Num_float_base
+	{	// limits for type double
+public:
+	 static constexpr double (min)() 
+		{	// return minimum value
+		return (DBL_MIN);
+		}
+
+	 static constexpr double (max)() 
+		{	// return maximum value
+		return (DBL_MAX);
+		}
+
+	 static constexpr double lowest() 
+		{	// return most negative value
+		return (-(max)());
+		}
+
+	 static constexpr double epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (DBL_EPSILON);
+		}
+
+	 static constexpr double round_error() 
+		{	// return largest rounding error
+		return (0.5);
+		}
+
+#define DBL_TRUE_MIN     4.9406564584124654e-324 // min positive value
+	 static constexpr double denorm_min() 
+		{	// return minimum denormalized value
+		return (DBL_TRUE_MIN);
+		}
+
+	 static constexpr double infinity() 
+		{	// return positive infinity
+		return (__builtin_huge_val());
+		}
+
+	 static constexpr double quiet_NaN() 
+		{	// return non-signaling NaN
+		return (__builtin_nan("0"));
+		}
+
+	 static constexpr double signaling_NaN() 
+		{	// return signaling NaN
+		return (__builtin_nans("1"));
+		}
+
+	static constexpr int digits = DBL_MANT_DIG;
+	static constexpr int digits10 = DBL_DIG;
+	static constexpr int max_digits10 = 17;
+	static constexpr int max_exponent = DBL_MAX_EXP;
+	static constexpr int max_exponent10 = DBL_MAX_10_EXP;
+	static constexpr int min_exponent = DBL_MIN_EXP;
+	static constexpr int min_exponent10 = DBL_MIN_10_EXP;
+	};
+
+		// CLASS numeric_limits<long double>
+template<> class numeric_limits<long double>
+	: public _Num_float_base
+	{	// limits for type long double
+public:
+	 static constexpr long double (min)() 
+		{	// return minimum value
+		return (LDBL_MIN);
+		}
+
+	 static constexpr long double (max)() 
+		{	// return maximum value
+		return (LDBL_MAX);
+		}
+
+	 static constexpr long double lowest() 
+		{	// return most negative value
+		return (-(max)());
+		}
+
+	 static constexpr long double epsilon() 
+		{	// return smallest effective increment from 1.0
+		return (LDBL_EPSILON);
+		}
+
+	 static constexpr long double round_error() 
+		{	// return largest rounding error
+		return (0.5L);
+		}
+#define LDBL_TRUE_MIN     4.9406564584124654e-324 // min positive value
+	 static constexpr long double denorm_min() 
+		{	// return minimum denormalized value
+		return (LDBL_TRUE_MIN);
+		}
+
+	 static constexpr long double infinity() 
+		{	// return positive infinity
+		return (__builtin_huge_val());
+		}
+
+	 static constexpr long double quiet_NaN() 
+		{	// return non-signaling NaN
+		return (__builtin_nan("0"));
+		}
+
+	 static constexpr long double signaling_NaN() 
+		{	// return signaling NaN
+		return (__builtin_nans("1"));
+		}
+
+	static constexpr int digits = LDBL_MANT_DIG;
+	static constexpr int digits10 = LDBL_DIG;
+	static constexpr int max_digits10 = 17;
+	static constexpr int max_exponent = LDBL_MAX_EXP;
+	static constexpr int max_exponent10 = LDBL_MAX_10_EXP;
+	static constexpr int min_exponent = LDBL_MIN_EXP;
+	static constexpr int min_exponent10 = LDBL_MIN_10_EXP;
+	};
+_STD_END
+ #pragma pop_macro("new")
+ 
+ #pragma pack(pop)
+#endif /* RC_INVOKED */
+#endif /* _LIMITS_ */
+
+/*
+ * Copyright (c) by P.J. Plauger. All rights reserved.
+ * Consult your license regarding permissions and restrictions.
+V6.50:0009 */

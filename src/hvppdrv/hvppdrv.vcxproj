@@ -1,0 +1,228 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{46A74761-6CFA-41AF-A536-47F08E2C7B48}</ProjectGuid>
+    <TemplateGuid>{1bc93793-694f-48fe-9372-81e2b05556fd}</TemplateGuid>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <Configuration>Debug</Configuration>
+    <Platform Condition="'$(Platform)' == ''">Win32</Platform>
+    <RootNamespace>hvppdrv</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <TargetVersion>
+    </TargetVersion>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
+    <CharacterSet>Unicode</CharacterSet>
+    <SpectreMitigation>false</SpectreMitigation>
+    <Driver_SpectreMitigation>false</Driver_SpectreMitigation>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <TargetVersion>Windows7</TargetVersion>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>WindowsKernelModeDriver10.0</PlatformToolset>
+    <ConfigurationType>Driver</ConfigurationType>
+    <DriverType>WDM</DriverType>
+    <SpectreMitigation>false</SpectreMitigation>
+    <DriverTargetPlatform>Desktop</DriverTargetPlatform>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\hvpp;$(VC_IncludePath);$(IncludePath);$(KMDF_INC_PATH)$(KMDF_VER_PATH);$(Solutiondir)\src\hvppdrv\stl$(SolutionDir);$(Solutiondir)\src\hvppdrv\KernelSocked;$(Solutiondir)\src\hvppdrv\include;$(Solutiondir)\src\hvppdrv\stl</IncludePath>
+    <OutDir>$(SolutionDir)bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\obj\$(PlatformShortName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <EnableInf2cat>false</EnableInf2cat>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+    <TargetName>CheatVmm</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DebuggerFlavor>DbgengKernelDebugger</DebuggerFlavor>
+    <IncludePath>$(ProjectDir);$(ProjectDir)..\hvpp;$(VC_IncludePath);$(IncludePath);$(KMDF_INC_PATH)$(KMDF_VER_PATH);$(ProjectDir)\include;$(ProjectDir)\KernelSocked;$(ProjectDir)\stl</IncludePath>
+    <OutDir>$(SolutionDir)bin\$(PlatformShortName)\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)bin\obj\$(PlatformShortName)\$(Configuration)\$(ProjectName)\</IntDir>
+    <Inf2CatUseLocalTime>true</Inf2CatUseLocalTime>
+    <EnableInf2cat>false</EnableInf2cat>
+    <TargetName>CheatVmm</TargetName>
+    <LibraryPath>$(ProjectDir)\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <DisableSpecificWarnings>4201;4748;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)%(RelativeDir)%(Filename)%(Extension).obj</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <SupportJustMyCode>false</SupportJustMyCode>
+      <ConformanceMode>false</ConformanceMode>
+      <PreprocessorDefinitions>ZYDIS_STATIC_DEFINE;_NO_CRT_STDIO_INLINE;_WIN64;_AMD64_;AMD64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level4</WarningLevel>
+    </ClCompile>
+    <Inf />
+    <MASM />
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <AdditionalDependencies>netio.lib;Zydis.lib;Ntstrsafe.lib;FltMgr.lib;%(AdditionalDependencies);$(KernelBufferOverflowLib);$(DDK_LIB_PATH)ntoskrnl.lib;$(DDK_LIB_PATH)hal.lib;$(DDK_LIB_PATH)wmilib.lib</AdditionalDependencies>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <DisableSpecificWarnings>4201;4603;4627;4986;4987;4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
+      <ObjectFileName>$(IntDir)%(RelativeDir)%(Filename)%(Extension).obj</ObjectFileName>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <ConformanceMode>false</ConformanceMode>
+      <TreatWarningAsError>false</TreatWarningAsError>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>ZYDIS_STATIC_DEFINE;_NO_CRT_STDIO_INLINE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Neither</FavorSizeOrSpeed>
+    </ClCompile>
+    <Inf />
+    <MASM />
+    <Link>
+      <GenerateDebugInformation>DebugFull</GenerateDebugInformation>
+      <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+      <TreatLinkerWarningAsErrors>false</TreatLinkerWarningAsErrors>
+      <AdditionalDependencies>netio.lib;Zydis.lib;Ntstrsafe.lib;FltMgr.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Inf Include="hvppdrv.inf">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <FilesToPackage Include="$(TargetPath)" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="device_custom.cpp" />
+    <ClCompile Include="DbgApi.cpp" />
+    <ClCompile Include="GrantManage.cpp" />
+    <ClCompile Include="include\cr3.cpp" />
+    <ClCompile Include="include\ddylog.cpp" />
+    <ClCompile Include="include\ddyutil.cpp" />
+    <ClCompile Include="include\globalobject.cpp" />
+    <ClCompile Include="include\instruction_check.cpp" />
+    <ClCompile Include="include\modify_instruction.cpp" />
+    <ClCompile Include="include\ntdll.cpp" />
+    <ClCompile Include="include\pe.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MemoryHide.cpp" />
+    <ClCompile Include="NoTraceBP.cpp" />
+    <ClCompile Include="SsdtHook.cpp" />
+    <ClCompile Include="Stowaways.cpp" />
+    <ClCompile Include="vmexit_custom.cpp" />
+    <ClCompile Include="HookDbgkApi.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="device_custom.h" />
+    <ClInclude Include="GrantManage.h" />
+    <ClInclude Include="DbgApi.h" />
+    <ClInclude Include="NoTraceBP.h" />
+    <ClInclude Include="include\cr3.h" />
+    <ClInclude Include="include\ddylog.h" />
+    <ClInclude Include="include\ddyutil.h" />
+    <ClInclude Include="include\globalobject.h" />
+    <ClInclude Include="include\instruction_check.h" />
+    <ClInclude Include="include\intel_code.h" />
+    <ClInclude Include="include\log.h" />
+    <ClInclude Include="include\modify_instruction.h" />
+    <ClInclude Include="include\ntdll.h" />
+    <ClInclude Include="include\pe.h" />
+    <ClInclude Include="include\undocenum.h" />
+    <ClInclude Include="include\undocfun.h" />
+    <ClInclude Include="include\undocstruct.h" />
+    <ClInclude Include="include\utilenum.h" />
+    <ClInclude Include="include\vt.h" />
+    <ClInclude Include="include\ZycoreExportConfig.h" />
+    <ClInclude Include="include\Zycore\Allocator.h" />
+    <ClInclude Include="include\Zycore\API\Memory.h" />
+    <ClInclude Include="include\Zycore\API\Synchronization.h" />
+    <ClInclude Include="include\Zycore\API\Terminal.h" />
+    <ClInclude Include="include\Zycore\API\Thread.h" />
+    <ClInclude Include="include\Zycore\ArgParse.h" />
+    <ClInclude Include="include\Zycore\Bitset.h" />
+    <ClInclude Include="include\Zycore\Comparison.h" />
+    <ClInclude Include="include\Zycore\Defines.h" />
+    <ClInclude Include="include\Zycore\Format.h" />
+    <ClInclude Include="include\Zycore\LibC.h" />
+    <ClInclude Include="include\Zycore\List.h" />
+    <ClInclude Include="include\Zycore\Object.h" />
+    <ClInclude Include="include\Zycore\Status.h" />
+    <ClInclude Include="include\Zycore\String.h" />
+    <ClInclude Include="include\Zycore\Types.h" />
+    <ClInclude Include="include\Zycore\Vector.h" />
+    <ClInclude Include="include\Zycore\Zycore.h" />
+    <ClInclude Include="include\ZydisExportConfig.h" />
+    <ClInclude Include="include\Zydis\Decoder.h" />
+    <ClInclude Include="include\Zydis\DecoderTypes.h" />
+    <ClInclude Include="include\Zydis\Formatter.h" />
+    <ClInclude Include="include\Zydis\FormatterBuffer.h" />
+    <ClInclude Include="include\Zydis\Generated\EnumInstructionCategory.h" />
+    <ClInclude Include="include\Zydis\Generated\EnumISAExt.h" />
+    <ClInclude Include="include\Zydis\Generated\EnumISASet.h" />
+    <ClInclude Include="include\Zydis\Generated\EnumMnemonic.h" />
+    <ClInclude Include="include\Zydis\Generated\EnumRegister.h" />
+    <ClInclude Include="include\Zydis\Internal\DecoderData.h" />
+    <ClInclude Include="include\Zydis\Internal\FormatterATT.h" />
+    <ClInclude Include="include\Zydis\Internal\FormatterBase.h" />
+    <ClInclude Include="include\Zydis\Internal\FormatterIntel.h" />
+    <ClInclude Include="include\Zydis\Internal\SharedData.h" />
+    <ClInclude Include="include\Zydis\Internal\String.h" />
+    <ClInclude Include="include\Zydis\MetaInfo.h" />
+    <ClInclude Include="include\Zydis\Mnemonic.h" />
+    <ClInclude Include="include\Zydis\Register.h" />
+    <ClInclude Include="include\Zydis\SharedTypes.h" />
+    <ClInclude Include="include\Zydis\ShortString.h" />
+    <ClInclude Include="include\Zydis\Status.h" />
+    <ClInclude Include="include\Zydis\Utils.h" />
+    <ClInclude Include="include\Zydis\Zydis.h" />
+    <ClInclude Include="MemoryHide.h" />
+    <ClInclude Include="winbase.h" />
+    <ClInclude Include="SsdtHook.h" />
+    <ClInclude Include="Stowaways.h" />
+    <ClInclude Include="vmexit_custom.h" />
+    <ClInclude Include="HookDbgkApi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\hvpp\hvpp-entry.vcxproj">
+      <Project>{d16e66b1-31bc-465f-916e-430803ffde99}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <MASM Include="PreSsdtApi.asm" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
